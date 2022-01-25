@@ -14,7 +14,7 @@ function RowPost(props) {
 
   useEffect(() => {
     axios.get(props.url).then(response=>{
-      console.log(process.env.API_KEY_SECRET)
+      // console.log(response.data)
       setMovie(response.data.results)
 
     }).catch(err=>{
@@ -33,7 +33,7 @@ function RowPost(props) {
   };
 
   const handleMovieTrailer = (id)=>{
-    console.log(process.env.API_KEY_SECRET)
+    console.log(id)
     axios.get(`movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
       if(response.data.results.length!==0){
         setUrlId(response.data.results[0])

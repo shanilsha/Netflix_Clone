@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import {originals,action,trending,horrorMovies,comedyMovies} from './urls'
 import Banner from './Components/Banner/Banner';
 import RowPost from './Components/RowPost/RowPost';
+console.log(process.env.REACT_APP_API_KEY)
 
 function App() {
   return (
